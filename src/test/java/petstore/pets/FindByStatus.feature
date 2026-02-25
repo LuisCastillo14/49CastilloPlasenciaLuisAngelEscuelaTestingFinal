@@ -1,4 +1,4 @@
-@FindPetByStatus
+@Pet @FindPetByStatus
 Feature: Buscar mascotas por estado
 
   Background:
