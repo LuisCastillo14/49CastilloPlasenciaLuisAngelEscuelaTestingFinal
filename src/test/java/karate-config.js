@@ -24,14 +24,6 @@ function fn() {
         nonExistentPetIdFind: 123456788,
         stringPetId: 'text',
 
-        // ── Store ───
-        testOrderId: 1,
-        nonExistentOrderId: 999999,
-
-        // ── User ──
-        testUsername: 'testUser123',
-        testUserPassword: karate.properties['USER_PASSWORD'] || 'password123',
-
         // ── Auth ──
         apiKey: karate.properties['API_KEY'] || 'api-key'
     };
