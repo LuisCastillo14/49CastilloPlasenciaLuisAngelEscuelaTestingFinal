@@ -3,7 +3,7 @@ Feature: Agregar nueva mascota
 
   Background:
     * url apiPetStore
-    * def JsonCrearMascota = read("classpath:petstore/jasonData/AddPet.json")
+    * def JsonCrearMascota = read("classpath:petstore/jasonData/pets/AddPet.json")
 
   @CreateOnePet
   Scenario: Crear una mascota
