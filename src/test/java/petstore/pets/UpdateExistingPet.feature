@@ -3,7 +3,7 @@ Feature: Actualizar una mascota existente
 
   Background:
     * url apiPetStore
-    * def JsonActualizarMascota = read("classpath:petstore/jasonData/UpdatePet.json")
+    * def JsonActualizarMascota = read("classpath:petstore/jasonData/pets/UpdatePet.json")
 
 
   @HappyPath @AllStatuses

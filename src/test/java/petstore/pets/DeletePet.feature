@@ -3,7 +3,7 @@ Feature: Eliminar una mascota
 
   Background:
     * url 'https://petstore.swagger.io/v2'
-    * def JsonCrearMascota = read("classpath:petstore/jasonData/AddPet.json")
+    * def JsonCrearMascota = read("classpath:petstore/jasonData/pets/AddPet.json")
 
 
   @HappyPath @DeleteExistingPet

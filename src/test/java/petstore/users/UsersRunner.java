@@ -6,7 +6,7 @@ class UsersRunner {
     
     @Karate.Test
     Karate testPets() {
-        return Karate.run("users").relativeTo(getClass());
+        return Karate.run("classpath:petstore/users").relativeTo(getClass());
     }    
 
 }
