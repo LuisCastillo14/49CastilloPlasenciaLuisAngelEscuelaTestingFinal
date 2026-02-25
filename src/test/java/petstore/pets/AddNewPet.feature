@@ -1,9 +1,18 @@
-@CreatePet
+@Pet @CreatePet
 Feature: Agregar nueva mascota
 
   Background:
     * url apiPetStore
     * def JsonCrearMascota = read("classpath:petstore/jasonData/AddPet.json")
+
+  @CreateOnePet
+  Scenario: Crear una mascota
+    Given path 'pet'
+    And request JsonCrearMascota
+    When method post
+    Then status 200
+
+    * def id = response.id
 
   @HappyPath @AllStatus
   Scenario Outline: Crear mascota con diferentes estatus - <status>

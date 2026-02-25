@@ -1,4 +1,4 @@
-@UpdatePet
+@Pet @UpdatePet
 Feature: Actualizar una mascota existente
 
   Background:

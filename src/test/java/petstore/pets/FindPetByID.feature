@@ -1,4 +1,4 @@
-@FindPetById
+@Pet @FindPetById
 Feature: Buscar mascota por ID
 
   Background:

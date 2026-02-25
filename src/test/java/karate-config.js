@@ -19,7 +19,7 @@ function fn() {
         apiPetStore: apiPetStore,
 
         // ── Pet ──
-        testPetId: 60,
+        testPetId: 10,
         nonExistentPetId: 9099887656556,
         nonExistentPetIdFind: 123456788,
         stringPetId: 'text',
