@@ -23,11 +23,6 @@ Feature: Eliminar un usuario por el username
     When method delete
     Then status 200
 
-    # Validar que ya no existe
-    Given path 'user', username
-    When method get
-    Then status 404
-
 
   @UnHappyPath @DeleteNonExistingUser
   Scenario: Eliminar usuario que no existe

@@ -2,6 +2,20 @@
 
 Este proyecto implementa pruebas automatizadas para la API de PetStore usando Karate y JUnit5. El objetivo es validar los endpoints de mascotas, usuarios y tienda, cubriendo escenarios tanto positivos (Happy Path) como negativos (UnHappy Path).
 
+
+La automatización cubre los módulos de Pets, Users y Store, incluyendo escenarios positivos (Happy Path) y negativos (UnHappy Path).
+
+API utilizada:
+https://petstore.swagger.io/v2
+
+## Tecnologías utilizadas
+
+- Java 17
+- Maven
+- Karate DSL 1.5.0
+- JUnit 5
+- Swagger PetStore (API pública)
+
 ## Estructura del proyecto
 
 - **src/test/java/petstore/pets/**: Pruebas de endpoints de mascotas (features y runner).
@@ -71,3 +85,11 @@ Durante la automatización se detectaron varios comportamientos inesperados en l
 
 Estas observaciones están documentadas en los escenarios UnHappyPath de los archivos `.feature`.
 
+## Limitaciones de la API pública
+
+- Durante la automatización se identificaron comportamientos inconsistentes en la API pública de PetStore:
+- No valida correctamente autenticación (elimina recursos sin apiKey válida).
+- Acepta datos inválidos en algunos endpoints.
+- Algunos endpoints retornan 200 cuando deberían retornar 400 o 401.El entorno es compartido globalmente, por lo que los datos pueden variar entre ejecuciones.
+- IDs negativos o formato incorrecto pueden retornar 404 o 500 en lugar de 400.
+- Estos comportamientos están documentados dentro de los escenarios UnHappyPath.

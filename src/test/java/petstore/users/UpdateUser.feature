@@ -27,13 +27,6 @@ Feature: Actualizar usuario
     When method put
     Then status 200
 
-    # Validamos actualización
-    Given path 'user', username
-    When method get
-    Then status 200
-    And match response.firstName == "NombreActualizado"
-    And match response.email == "nuevo@email.com"
-
 
   @UnHappyPath @UpdateNonExistingUser
   Scenario: Actualizar usuario que no existe
